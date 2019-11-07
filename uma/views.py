@@ -8,5 +8,5 @@ from django.views import View
 class TwoSecondsView(View):
 
     def get(self, request: HttpRequest):
-        sleep(9)
+        sleep(2)
         return JsonResponse({'data': request.GET, 'test': '%r' % datetime.now()})
